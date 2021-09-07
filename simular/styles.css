@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+*{
+    padding: 0;
+    border: none;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    background-color: #2B519A;
+    display: grid;
+    grid-template-areas: 
+    'lading-content' 
+    'calculator' 
+    'icons'
+    ;
+    overflow-x: hidden;
+}
+
+.white-45{
+    /* position: absolute;
+    top: -10vh;
+    right: -10vw;
+    width: 50vw;
+    height: 140vh;
+    transform: rotate(45deg);
+    background-color: white;
+    z-index: -1;
+    border-radius: 30%; */
+}
+
+.my-back-svg{
+    display: none;
+}
+
+#myLandingContent{
+    grid-area: lading-content;
+    display: flex;
+    flex-flow: column wrap;
+    color: #F8FCF7;
+    padding: 24px;
+}
+
+.page-title{
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 41px;
+    margin-bottom: 22px;
+}
+
+.page-sub-title{
+    font-size: 23px;
+    line-height: 27px;
+    font-weight: 400;
+    margin-bottom: 47px;
+}
+
+.page-lading-text{
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+
+.page-landing-btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10.5px 21px;
+    border: 1px solid #E2FFFF;
+    border-radius: 50px;
+    background-color: transparent;
+    color: white;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    width: 173px;
+    cursor: pointer;
+}
+
+.page-landing-btn:hover{
+    background-color: rgba(246, 119, 0, 0.692);
+}
+
+#myIconsSection{
+    grid-area: icons;
+    display: flex;
+    padding: 30px 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon-frame{
+    border: 1px solid white;
+    width: 30%;
+    padding: 15px;
+}
+
+.icon-frame-no-border{
+    width: 30%;
+}
+
+#simulateSection{
+    grid-area: calculator;
+    background: #2B519A;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 42px 14px 75px 14px;
+}
+
+.simulate-title{
+    font-weight: normal;
+    font-size: 38px;
+    line-height: 45px;
+    text-align: center;
+    color: #FFF;
+    margin-bottom: 45px;
+}
+
+.calc-data{
+    padding: 18px 15px 44px 15px;
+    background: #FFFFFF;
+    border-radius: 15px;
+}
+
+.calc-data > form{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 5px 7px 5px 25px;
+    margin-bottom: 22px;
+}
+
+.form-row-title{
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #2B519A;
+}
+
+.form-row-input{
+    border: none;
+    border-bottom: 1px solid #2B519A;
+    width: 100%;
+    font-weight: normal;
+    height: 32px;
+     font-size: 20px; 
+    line-height: 32px;
+}
+
+#simulate-btn{
+    background: #F67600;
+    width: 100%;
+    border-radius: 21px;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 29px;
+    height: 51px;
+    color: #FFFFFF;
+    margin-top: 13px;
+    cursor: pointer;
+}
+
+@media (min-width: 768px){
+    body{
+        grid-template-areas: 
+        'lading-content calculator'  
+        'icons calculator'
+        ;
+        padding: 22px;
+    }
+
+    #myLandingContent{
+        justify-content: space-between;
+    }
+
+    .page-title{
+        font-size: 54px;
+        line-height: 63px;
+    }
+
+    .page-sub-title{
+        font-size: 30px;
+        line-height: 35px;
+    }
+
+    .icon-frame, .icon-frame-no-border{
+        max-width: 32%;
+        height: 78px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .icon-frame > svg, .icon-frame-no-border > svg{
+        max-height: 100%;
+    }
+
+    #simulateSection{
+        max-width: 360px;
+        justify-self: flex-end;
+    }
+    
+}
+
+@media (min-width: 1100px){
+    .my-back-svg{
+        display: inline;
+        position: absolute;
+        top: 0;
+        right: 0px;
+        z-index: -1;
+        width: 40vw;
+    }
+    body{
+        padding: 50px;
+        padding-top: 20px; 
+        grid-template-rows: max-content max-content;
+    }
+
+    #myLandingContent{
+        width: 422px;
+        justify-content: flex-start;
+    }
+
+    #simulateSection{
+        padding: 20px 14px 20px 14px;
+    }
+}
